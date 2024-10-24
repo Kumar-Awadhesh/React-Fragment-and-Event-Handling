@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+    <style>
+      #root{
+        width: 400px;
+        text-align: center;
+        align-content: center;
+        margin: auto;
+        margin-top: 30px;
+        background-color: aquamarine;
+        border-radius: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="root">
+       
+    </div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    //function to return/mount data to ReactDOM.
+    function Fun(){
+
+      return(
+        <>
+        {/*{create a p tag}*/}
+          <p>React is a Javascript library</p>
+
+          {/*{create a div tag}*/}
+          <div>
+
+            {/*{create a button inside p tag}*/}
+            <p><button onClick={()=>{
+
+              {/*{add an alert message}*/}
+              alert("Hello!")
+
+            }}>Click here to alert!</button></p>
+          </div>
+        </>
+      )
+    };
+    {/*{mount the data to ReactDOM}*/}
+    let result = ReactDOM.createRoot(document.getElementById("root"));
+
+    {/*{render the function}*/}
+    result.render(<Fun/>)
+  </script>
